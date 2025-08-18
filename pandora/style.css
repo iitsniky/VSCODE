@@ -160,17 +160,23 @@ body {
   }
 
   .top-menu {
-    font-size: 1.2rem;
-    letter-spacing: 1px;
+    font-size: 1rem;       /* smaller text */
+    letter-spacing: 1px;   /* tighter spacing */
+    height: auto;          /* no fixed height */
+    padding: 0.5rem 0;     /* less vertical padding */
   }
 
   .top-menu ul {
-    flex-direction: column; /* stack menu items */
-    gap: 0.5rem;
+    flex-direction: column; /* stack items vertically */
+    gap: 0.3rem;
+  }
+
+  .top-menu li {
+    margin: 0.2rem 0;
   }
 
   .top-menu p {
-    display: none; /* hide the "|" separators */
+    display: none; /* hide the "|" dividers */
   }
 
   header h1 {
@@ -181,6 +187,7 @@ body {
     font-size: 1.5rem;
   }
 }
+
 
 
         

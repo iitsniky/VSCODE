@@ -168,7 +168,7 @@ body {
 
   .top-menu ul {
     flex-direction: column; /* stack items vertically */
-    gap: 0.3rem;
+    /*gap: 0.3rem;*/
   }
 
   .top-menu li {

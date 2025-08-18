@@ -93,22 +93,31 @@
 
     .bottom-menu {
         font-size: 18px;
-        flex-direction: row;       /* keep it horizontal */
         bottom: 10px;
-        right: 10px;
-        letter-spacing: 2px;
-        overflow-x: auto;          /* allow horizontal scroll if too wide */
+        right: 0;
+        left: 0;
+        display: flex;
+        justify-content: center; /* center menu on small screens */
+        overflow-x: auto;        /* allow horizontal scrolling */
+        white-space: nowrap;     /* prevent wrapping */
+        padding: 0 10px;
+        box-sizing: border-box;
     }
 
     .bottom-menu ul {
-        flex-direction: row;       /* horizontal menu items */
+        display: flex;
+        flex-direction: row;
         padding: 0;
         margin: 0;
     }
 
     .bottom-menu li, .bottom-menu p {
         margin: 0 5px;
-        white-space: nowrap;       /* prevent wrapping */
+        flex-shrink: 0;  /* prevent items from shrinking */
+    }
+
+    .bottom-menu a {
+        font-size: 16px; /* slightly smaller links for tiny screens */
     }
 }
     </style>

@@ -77,9 +77,12 @@
         font-size: 50px;
     }
     .bottom-menu {
-        font-size: 28px;
-        letter-spacing: 8px;
+        font-size: 24px;
+        letter-spacing: 6px;
         bottom: 20px;
+    }
+    .bottom-menu li {
+        margin: 0 10px;
     }
 }
 
@@ -91,23 +94,26 @@
         text-align: center;
     }
     .character-home2 {
-        font-size: 35px;
+        font-size: 28px;
         margin-top: 10px;
     }
     .bottom-menu {
-        font-size: 18px;
-        letter-spacing: 3px;
+        font-size: 16px;
+        letter-spacing: 2px;
         bottom: 10px;
     }
     .bottom-menu ul {
-        flex-wrap: wrap; /* wrap to new line if needed */
+        flex-wrap: nowrap; /* force single row */
         justify-content: center;
     }
-    .bottom-menu li, .bottom-menu p {
-        margin: 2px 5px;
+    .bottom-menu li {
+        margin: 0 5px; /* smaller spacing */
     }
     .bottom-menu a {
-        font-size: 16px;
+        font-size: 14px;
+    }
+    .bottom-menu p {
+        display: none; /* remove the | separators */
     }
 }
     </style>
@@ -121,7 +127,13 @@
     </div>
     <nav class="bottom-menu">
     <ul>
-        <li><a href="pandora.html">Home</a></li>
+        <li><a href="pandora.html">Lore</a></li>
+        <p>|</p>
+        <li><a href="pandora.html">Physical appearance</a></li>
+        <p>|</p>
+        <li><a href="pandora.html">Traits</a></li>
+        <p>|</p>
+        <li><a href="pandora.html">Strengths</a></li>
     </ul>
 </nav>
     <footer>

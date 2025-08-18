@@ -69,55 +69,45 @@
     margin: 0 10px;
     color: #670a81;
 }
-/* MOBILE RESPONSIVE */
-        @media screen and (max-width: 1024px) {
+/* Tablets and small notebooks */
+@media screen and (max-width: 1024px) {
     .character-home2 {
         float: none;
         margin: 20px auto;
         font-size: 50px;
     }
-
     .bottom-menu {
-        font-size: 25px;
-        bottom: 10px;
-        right: 10px;
-        letter-spacing: 5px;
+        font-size: 28px;
+        letter-spacing: 8px;
+        bottom: 20px;
     }
 }
 
+/* Mobile phones */
 @media screen and (max-width: 600px) {
+    .character-home {
+        float: none;
+        margin: 10px auto;
+        text-align: center;
+    }
     .character-home2 {
         font-size: 35px;
         margin-top: 10px;
     }
-
     .bottom-menu {
         font-size: 18px;
+        letter-spacing: 3px;
         bottom: 10px;
-        right: 0;
-        left: 0;
-        display: flex;
-        justify-content: center; /* center menu on small screens */
-        overflow-x: auto;        /* allow horizontal scrolling */
-        white-space: nowrap;     /* prevent wrapping */
-        padding: 0 10px;
-        box-sizing: border-box;
     }
-
     .bottom-menu ul {
-        display: flex;
-        flex-direction: row;
-        padding: 0;
-        margin: 0;
+        flex-wrap: wrap; /* wrap to new line if needed */
+        justify-content: center;
     }
-
     .bottom-menu li, .bottom-menu p {
-        margin: 0 5px;
-        flex-shrink: 0;  /* prevent items from shrinking */
+        margin: 2px 5px;
     }
-
     .bottom-menu a {
-        font-size: 16px; /* slightly smaller links for tiny screens */
+        font-size: 16px;
     }
 }
     </style>

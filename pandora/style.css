@@ -195,7 +195,46 @@ body {
 
   /* general mobile polish */
   img { max-width: 100%; height: auto; }
+  
 }
+/* === Mobile centering fixes === */
+@media (max-width: 600px) {
+  /* keep the content block visually centered */
+  main, header, footer, section {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* center headings on mobile */
+  header h1,
+  h2 {
+    text-align: center;
+  }
+
+  /* remove desktop-only left offset from traits block */
+  .character-traits2 {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  /* make image blocks not influence text flow */
+  .character-info,
+  .character-traits {
+    float: none;
+    clear: both;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+
+  /* keep paragraphs readable (left aligned).
+     If you prefer fully centered text, uncomment the next line */
+  /* p { text-align: center; } */
+}
+
 
 
 

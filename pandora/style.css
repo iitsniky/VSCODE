@@ -153,40 +153,50 @@ body {
 }
 
 /* Mobile phones */
+/* ===== Mobile menu: slim, single row (scrollable) ===== */
 @media (max-width: 600px) {
-  body {
-    margin: 0 1rem;
-    font-size: 0.95rem;
-  }
-
   .top-menu {
-    font-size: 1rem;       /* smaller text */
-    letter-spacing: 1px;   /* tighter spacing */
-    height: auto;          /* no fixed height */
-    padding: 0.5rem 0;     /* less vertical padding */
+    height: 48px;           /* small fixed bar */
+    padding: 0;
+    font-size: 1rem;        /* smaller nav text */
+    letter-spacing: 1px;    /* tighter tracking */
+    line-height: 1;         /* stop tall lines from the font */
   }
 
   .top-menu ul {
-    flex-direction: column; /* stack items vertically */
-    /*gap: 0.3rem;*/
+    display: flex;
+    flex-wrap: nowrap;                 /* keep one row */
+    overflow-x: auto;                  /* allow horizontal scroll if needed */
+    -webkit-overflow-scrolling: touch; /* smooth iOS scroll */
+    gap: 1rem;
+    margin: 0;
+    padding: 0 1rem;
   }
 
   .top-menu li {
-    margin: 0.2rem 0;
+    flex: 0 0 auto;  /* don't shrink menu items */
+    margin: 0;
+  }
+
+  .top-menu a {
+    display: block;
+    padding: 14px 0;  /* less vertical padding per item */
+    line-height: 1;   /* keep the row compact */
   }
 
   .top-menu p {
-    display: none; /* hide the "|" dividers */
+    display: none;    /* hide the "|" separators on mobile */
   }
 
-  header h1 {
-    font-size: 2rem;
+  /* match content offset to the smaller bar */
+  header {
+    margin-top: 56px; /* was 70px; adjust so content isn't too far down */
   }
 
-  h2 {
-    font-size: 1.5rem;
-  }
+  /* general mobile polish */
+  img { max-width: 100%; height: auto; }
 }
+
 
 
 

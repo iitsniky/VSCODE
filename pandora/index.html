@@ -71,43 +71,46 @@
 }
 /* MOBILE RESPONSIVE */
         @media screen and (max-width: 1024px) {
-            .character-home2 {
-                float: none;
-                margin: 20px auto;
-                font-size: 50px;
-            }
+    .character-home2 {
+        float: none;
+        margin: 20px auto;
+        font-size: 50px;
+    }
 
-            .bottom-menu {
-                font-size: 25px;
-                bottom: 10px;
-                right: 10px;
-                letter-spacing: 5px;
-            }
-        }
+    .bottom-menu {
+        font-size: 25px;
+        bottom: 10px;
+        right: 10px;
+        letter-spacing: 5px;
+    }
+}
 
-        @media screen and (max-width: 600px) {
-            .character-home2 {
-                font-size: 35px;
-                margin-top: 10px;
-            }
+@media screen and (max-width: 600px) {
+    .character-home2 {
+        font-size: 35px;
+        margin-top: 10px;
+    }
 
-            .bottom-menu {
-                font-size: 18px;
-                flex-direction: column;
-                bottom: 10px;
-                right: 10px;
-                letter-spacing: 2px;
-            }
+    .bottom-menu {
+        font-size: 18px;
+        flex-direction: row;       /* keep it horizontal */
+        bottom: 10px;
+        right: 10px;
+        letter-spacing: 2px;
+        overflow-x: auto;          /* allow horizontal scroll if too wide */
+    }
 
-            .bottom-menu ul {
-                flex-direction: column;
-                align-items: flex-end;
-            }
+    .bottom-menu ul {
+        flex-direction: row;       /* horizontal menu items */
+        padding: 0;
+        margin: 0;
+    }
 
-            .bottom-menu li, .bottom-menu p {
-                margin: 3px 0;
-            }
-        }
+    .bottom-menu li, .bottom-menu p {
+        margin: 0 5px;
+        white-space: nowrap;       /* prevent wrapping */
+    }
+}
     </style>
 </head>
 <body>

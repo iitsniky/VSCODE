@@ -1,0 +1,119 @@
+body {
+            margin-left: 120px;
+            padding: 0;
+            font-family: All;
+            font-size: large;
+            margin-right: 120px;
+        }
+        .top-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #a86db9;
+            color: black;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            height: 60px;
+            font-size: 50px;
+            font-family: Pretty;
+            letter-spacing: 10px;
+        }
+        .top-menu p {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            margin: 0 15px;
+            margin-top: 10px;
+            color: white;
+        }
+        .top-menu ul {
+            list-style: none;
+            margin: 0 30px 0 0;
+            padding: 0;
+            display: flex;
+        }
+        .top-menu li {
+            margin: 0 15px;
+        }
+        .top-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 18px 0;
+            display: block;
+            transition: color 0.2s;
+        }
+        .top-menu a:hover {
+            color: #000000;
+        }
+        header {
+            margin-top: 70px; /* space for fixed menu */
+            margin-right: 50px;
+            font-family: Handwritten;
+            font-size: 40px;
+            color: #670a81;
+            text-align: center;
+        }
+        .character-info {
+            float:right;
+        clear:right;
+        margin-left: 1rem;
+        margin-bottom: 2px;
+        margin-top: 2px;
+        text-align: right;
+        padding-right: 25px;
+        }
+        h2 {
+            font-family: Handwritten;
+            font-size: 40px;
+            color: #670a81;
+            margin-top: 20px;
+        }
+        header h1 {
+    margin: 0; /* remove default margins */
+    padding-top: 20px; /* add custom padding if needed */
+    padding-bottom: 10px;
+}
+        .character-traits img{
+            float:left;
+        clear:left;
+        margin-left: 1rem;
+        margin-bottom: 2px;
+        margin-top: 2px;
+        text-align: left;
+            display: block; /* or keep fixed width if you prefer */
+
+  -webkit-mask-image: 
+    radial-gradient(farthest-side, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: cover;
+
+  mask-image: 
+    radial-gradient(farthest-side, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
+        }
+        .character-traits2 {
+            padding-left: 200px;
+            margin-left: 200px;
+        }
+
+        
+        @font-face {
+  font-family: Handwritten;
+  src: url(ROFTB.ttf) format('truetype');
+}
+@font-face {
+  font-family: Pretty;
+  src: url(Diary\ Book.otf) format('truetype');
+}
+@font-face {
+  font-family: All;
+  src: url(KGSimplytheBest.otf) format('truetype');
+}

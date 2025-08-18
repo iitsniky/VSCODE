@@ -71,51 +71,58 @@
 }
 /* Tablets and small notebooks */
 @media screen and (max-width: 1024px) {
+    .character-home img {
+        width: 60%; /* smaller image */
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
     .character-home2 {
         float: none;
-        margin: 20px auto;
+        margin: 20px auto 40px auto;
+        text-align: center;
         font-size: 50px;
     }
-    .bottom-menu {
-        font-size: 24px;
-        letter-spacing: 6px;
-        bottom: 20px;
+    .bottom-menu ul {
+        justify-content: center; /* center menu */
+        font-size: 28px; /* smaller menu text */
+        letter-spacing: 5px;
     }
-    .bottom-menu li {
-        margin: 0 10px;
+    .bottom-menu {
+        bottom: 30px;
+        right: 0;
+        left: 0;
     }
 }
 
 /* Mobile phones */
 @media screen and (max-width: 600px) {
-    .character-home {
-        float: none;
-        margin: 10px auto;
-        text-align: center;
+    .character-home img {
+        width: 90%; /* almost full width */
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
     }
     .character-home2 {
-        font-size: 28px;
-        margin-top: 10px;
+        float: none;
+        margin: 10px auto 20px auto;
+        text-align: center;
+        font-size: 36px;
     }
     .bottom-menu {
-        font-size: 16px;
-        letter-spacing: 2px;
-        bottom: 10px;
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%); /* center menu */
+        font-size: 24px; /* smaller menu */
+        letter-spacing: 3px;
     }
     .bottom-menu ul {
-        flex-wrap: nowrap; /* force single row */
-        justify-content: center;
-    }
-    .bottom-menu li {
-        margin: 0 5px; /* smaller spacing */
-    }
-    .bottom-menu a {
-        font-size: 14px;
-    }
-    .bottom-menu p {
-        display: none; /* remove the | separators */
+        justify-content: center; /* center items in row */
+        flex-wrap: nowrap; /* keep all items in one row */
     }
 }
+
     </style>
 </head>
 <body>

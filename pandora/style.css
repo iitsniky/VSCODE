@@ -107,13 +107,13 @@ body {
         
         @font-face {
   font-family: Handwritten;
-  src: url(ROFTB.ttf) format('truetype');
+  src: url(fonts/ROFTB.ttf) format('truetype');
 }
 @font-face {
   font-family: Pretty;
-  src: url(Diary\ Book.otf) format('truetype');
+  src: url(fonts/Diary\ Book.otf) format('truetype');
 }
 @font-face {
   font-family: All;
-  src: url(KGSimplytheBest.otf) format('truetype');
+  src: url(fonts/KGSimplytheBest.otf) format('truetype');
 }

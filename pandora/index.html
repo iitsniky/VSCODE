@@ -73,13 +73,19 @@
 @media screen and (max-width: 1024px) {
     .character-home2 {
         float: none;
-        margin: 20px auto;
+        margin: 40px auto 20px auto;
+        text-align: center;
         font-size: 50px;
     }
     .bottom-menu {
         font-size: 24px;
         letter-spacing: 6px;
         bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%); /* center on tablets */
+    }
+    .bottom-menu ul {
+        justify-content: center;
     }
     .bottom-menu li {
         margin: 0 10px;
@@ -93,18 +99,24 @@
         margin: 10px auto;
         text-align: center;
     }
+    .character-home img {
+        width: 90%; /* scale image for small screens */
+        height: auto;
+    }
     .character-home2 {
         font-size: 28px;
-        margin-top: 10px;
+        margin: 20px auto 10px auto; /* reduce spacing */
+        text-align: center;
     }
     .bottom-menu {
         font-size: 16px;
         letter-spacing: 2px;
         bottom: 10px;
-        float: center;  /* center the menu */
+        left: 50%;
+        transform: translateX(-50%); /* properly center on mobile */
     }
     .bottom-menu ul {
-        flex-wrap: nowrap; /* force single row */
+        flex-wrap: nowrap; /* keep single row */
         justify-content: center;
     }
     .bottom-menu li {
@@ -113,7 +125,9 @@
     .bottom-menu a {
         font-size: 14px;
     }
-    
+    .bottom-menu p {
+        display: none; /* hide | for mobile */
+    }
 }
     </style>
 </head>

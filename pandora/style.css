@@ -103,6 +103,85 @@ body {
             padding-left: 200px;
             margin-left: 200px;
         }
+        /* ========== RESPONSIVE FIXES ========== */
+
+/* Tablet and smaller */
+@media (max-width: 1024px) {
+  body {
+    margin: 0 2rem; /* less side margin on smaller screens */
+    font-size: 1rem;
+  }
+
+  .top-menu {
+    font-size: 1.5rem;  /* shrink menu font */
+    letter-spacing: 3px;
+    height: auto;
+    padding: 0.5rem;
+  }
+
+  .top-menu ul {
+    flex-wrap: wrap; /* allow wrapping */
+    justify-content: center;
+  }
+
+  .character-info,
+  .character-traits {
+    float: none;
+    clear: none;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+
+  .character-traits2 {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+  body {
+    margin: 0 1rem;
+    font-size: 0.95rem;
+  }
+
+  .top-menu {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+
+  .top-menu ul {
+    flex-direction: column; /* stack menu items */
+    gap: 0.5rem;
+  }
+
+  .top-menu p {
+    display: none; /* hide the "|" separators */
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
 
         
         @font-face {

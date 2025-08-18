@@ -100,22 +100,32 @@
         margin-top: 10px;
     }
     .bottom-menu {
-        font-size: 16px;
-        letter-spacing: 2px;
-        bottom: 10px;
+        height: 48px;
+        padding: 0;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        bottom: 20px;
         float: center;  /* center the menu */
-        right: 0;
-        left: 0; /* center the menu */
+        
     }
     .bottom-menu ul {
-        flex-wrap: nowrap; /* force single row */
+        display: flex;
+    flex-wrap: nowrap;                 /* keep one row */
+    overflow-x: auto;                  /* allow horizontal scroll if needed */
+    -webkit-overflow-scrolling: touch; /* smooth iOS scroll */
+    gap: 1rem;
+    margin: 0;
+    padding: 0 1rem;
         justify-content: center;
     }
     .bottom-menu li {
+        flex: 0 0 auto;  /* don't shrink menu items */
         margin: 0 5px; /* smaller spacing */
     }
     .bottom-menu a {
-        font-size: 14px;
+        display: block;
+    padding: 14px 0;  /* less vertical padding per item */
+    line-height: 1;   /* keep the row compact */
     }
     .bottom-menu p {
         display: none; /* remove the | separators */

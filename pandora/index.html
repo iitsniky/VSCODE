@@ -71,36 +71,20 @@
 }
 /* Tablets and small notebooks */
 @media screen and (max-width: 1024px) {
-
-    .bottom-menu li {
-        margin: 0 10px;
-    }
-    html, body {
-        height: 100%;          /* make body full height */
-        margin: 0;
-        overflow: hidden;      /* remove scrollbars */
-    }
-    .character-home, .character-home2 {
-        position: absolute;    /* place elements within full screen */
-    }
-    .character-home {
-        top: 10%;              /* adjust vertical placement */
-        left: 5%;
-        width: 40%;            /* scale image */
-    }
     .character-home2 {
-        top: 10%;
-        right: 5%;
-        width: 50%;
-        font-size: 60px;       /* scale font */
+        float: none;
+        margin: 20px auto;
+        font-size: 50px;
     }
     .bottom-menu {
+        font-size: 24px;
+        letter-spacing: 6px;
         bottom: 20px;
-        left: 0;
         right: 0;
-        text-align: center;
-        font-size: 28px;
-        letter-spacing: 8px;
+        left: 0; /* center the menu */
+    }
+    .bottom-menu li {
+        margin: 0 10px;
     }
 }
 /* Medium notebooks */

@@ -89,15 +89,35 @@
 }
 /* Medium notebooks */
 @media screen and (max-width: 1440px) {
+    html, body {
+        height: 100%;          /* make body full height */
+        margin: 0;
+        overflow: hidden;      /* remove scrollbars */
+    }
+    .character-home, .character-home2 {
+        position: absolute;    /* place elements within full screen */
+    }
+    .character-home {
+        top: 10%;              /* adjust vertical placement */
+        left: 5%;
+        width: 40%;            /* scale image */
+    }
     .character-home2 {
-        font-size: 60px;
-        margin-top: 50px;
+        top: 10%;
+        right: 5%;
+        width: 50%;
+        font-size: 60px;       /* scale font */
     }
     .bottom-menu {
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        text-align: center;
         font-size: 28px;
         letter-spacing: 8px;
     }
 }
+
 
 
 /* Mobile phones */

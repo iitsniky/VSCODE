@@ -5,6 +5,10 @@ body {
             font-size: large;
             margin-right: 120px;
         }
+        html {
+  scroll-padding-top: 70px; /* match or slightly bigger than .top-menu height */
+}
+
         .top-menu {
             position: fixed;
             top: 0;

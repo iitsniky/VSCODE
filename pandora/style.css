@@ -242,11 +242,11 @@ body {
         
         @font-face {
   font-family: Handwritten;
-  src: url(fonts/ROFTB.ttf) format('truetype');
+  src: url(fonts/Loverine.otf) format('truetype');
 }
 @font-face {
   font-family: Pretty;
-  src: url(fonts/Diary\ Book.otf) format('truetype');
+  src: url(fonts/NOTE\ BOOK.otf) format('truetype');
 }
 @font-face {
   font-family: All;

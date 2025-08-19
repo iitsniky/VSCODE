@@ -10,7 +10,7 @@ body {
             top: 0;
             left: 0;
             width: 100%;
-            background: #a86db9;
+            background: #e9dbc1;
             color: black;
             z-index: 1000;
             display: flex;
@@ -55,7 +55,7 @@ body {
             margin-right: 50px;
             font-family: Handwritten;
             font-size: 40px;
-            color: #670a81;
+            color: #3b2324;
             text-align: center;
         }
         .character-info {
@@ -70,7 +70,7 @@ body {
         h2 {
             font-family: Handwritten;
             font-size: 40px;
-            color: #670a81;
+            color: #3b2324;
             margin-top: 20px;
         }
         header h1 {

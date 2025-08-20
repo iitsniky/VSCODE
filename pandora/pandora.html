@@ -136,45 +136,75 @@
                 <img src="gallery/10pr.jpg" alt="Pandora and Reggie" height="250">
                 <img src="gallery/11pre.jpg" alt="Pandora, Reggie and Evan" height="250">
                 <img src="gallery/12p.jpg" alt="Pandora Rosier" height="250">
-                <img src="gallery/13p.jpg" alt="Pandora Rosier" height="250">
                 <img src="gallery/14pe.jpg" alt="Pandora and Reggie" height="250">
                 <img src="gallery/15peb.jpg" alt="Pandora, Evan and Barty" height="250">
             </div>
         </section>
+        <!-- Lightbox Overlay -->
         <div id="lightbox" class="lightbox">
             <span class="close">&times;</span>
-            <img id="lightbox-img" src="" alt="zoomed image">
+            <span class="prev">&#10094;</span>
+            <span class="next">&#10095;</span>
+            <div class="lightbox-content">
+                <img id="lightbox-img" src="" alt="">
+                <p id="lightbox-caption"></p>
+            </div>
         </div>
+
         <script>
-  const galleryImages = document.querySelectorAll(".gallery img");
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-  const closeBtn = document.querySelector(".lightbox .close");
+const galleryImages = document.querySelectorAll(".gallery img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const lightboxCaption = document.getElementById("lightbox-caption");
+const closeBtn = document.querySelector(".lightbox .close");
+const prevBtn = document.querySelector(".lightbox .prev");
+const nextBtn = document.querySelector(".lightbox .next");
 
-  galleryImages.forEach(img => {
-    img.addEventListener("click", () => {
-      lightbox.style.display = "flex";
-      lightboxImg.src = img.src;
-      lightboxImg.alt = img.alt;
-    });
-  });
+let currentIndex = 0;
 
-  closeBtn.addEventListener("click", () => {
-    lightbox.style.display = "none";
-  });
+function showLightbox(index) {
+  currentIndex = index;
+  const img = galleryImages[currentIndex];
+  lightboxImg.src = img.src;
+  lightboxCaption.textContent = img.alt || "";
+  lightbox.style.display = "flex";
+}
 
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) {
-      lightbox.style.display = "none"; // close when clicking outside the image
-    }
-  });
+galleryImages.forEach((img, i) => {
+  img.addEventListener("click", () => showLightbox(i));
+});
 
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      lightbox.style.display = "none";
-    }
-  });
+function closeLightbox() {
+  lightbox.style.display = "none";
+}
+
+function showNext() {
+  currentIndex = (currentIndex + 1) % galleryImages.length;
+  showLightbox(currentIndex);
+}
+
+function showPrev() {
+  currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+  showLightbox(currentIndex);
+}
+
+closeBtn.addEventListener("click", closeLightbox);
+nextBtn.addEventListener("click", showNext);
+prevBtn.addEventListener("click", showPrev);
+
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) closeLightbox();
+});
+
+document.addEventListener("keydown", (e) => {
+  if (lightbox.style.display === "flex") {
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowRight") showNext();
+    if (e.key === "ArrowLeft") showPrev();
+  }
+});
 </script>
+
 
     </main>
     <footer>

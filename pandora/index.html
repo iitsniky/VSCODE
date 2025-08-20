@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,150 +11,178 @@
         body {
             background-color: #e9dbc1;
         }
+
         .character-home {
-            float:left;
-        clear:left;
-        margin-left: 1rem;
-        margin-bottom: 2px;
-        margin-top: 2px;
-        text-align: left;
-        padding-right: 25px;
+            float: left;
+            clear: left;
+            margin-left: 1rem;
+            margin-bottom: 2px;
+            margin-top: 2px;
+            text-align: left;
+            padding-right: 25px;
 
         }
+
         .character-home2 {
-            float:right;
-            margin-top: 150px; /* space for fixed menu */
+            float: right;
+            margin-top: 150px;
+            /* space for fixed menu */
             margin-right: 50px;
             font-family: Handwritten;
             font-size: 50px;
             color: #3b2324;
             text-align: center;
         }
+
         .bottom-menu {
-    position: fixed;
-    bottom: 40px; /* distance from bottom */
-    right: 20px;  /* distance from right */
-    background: transparent; /* invisible background */
-    color: #3b2324;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    font-size: 35px;
-    font-family: Pretty;
-    letter-spacing: 10px;
-}
+            position: fixed;
+            bottom: 40px;
+            /* distance from bottom */
+            right: 20px;
+            /* distance from right */
+            background: transparent;
+            /* invisible background */
+            color: #3b2324;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            font-size: 35px;
+            font-family: Pretty;
+            letter-spacing: 10px;
+        }
 
-.bottom-menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
+        .bottom-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
 
-.bottom-menu li {
-    margin: 0 15px;
-}
+        .bottom-menu li {
+            margin: 0 15px;
+        }
 
-.bottom-menu a {
-    color: #3b2324;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.2s;
-}
+        .bottom-menu a {
+            color: #3b2324;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
 
-.bottom-menu a:hover {
-    color: rgb(117, 90, 68);
-}
+        .bottom-menu a:hover {
+            color: rgb(117, 90, 68);
+        }
 
-.bottom-menu p {
-    margin: 0 10px;
-    color: #3b2324;
-}
-/* Tablets and small notebooks */
-@media screen and (max-width: 1024px) {
-    .character-home2 {
-        float: none;
-        margin: 20px auto;
-        font-size: 50px;
-    }
-    .bottom-menu {
-        font-size: 24px;
-        letter-spacing: 6px;
-        bottom: 20px;
-        right: 0;
-        left: 0; /* center the menu */
-    }
-    .bottom-menu li {
-        margin: 0 10px;
-    }
-}
+        .bottom-menu p {
+            margin: 0 10px;
+            color: #3b2324;
+        }
 
-/* Mobile phones */
-@media screen and (max-width: 600px) {
-    .character-home {
-        float: none;
-        margin: 10px auto;
-        text-align: center;
-    }
-    .character-home2 {
-        font-size: 28px;
-        margin-top: 10px;
-    }
-    .bottom-menu {
-        height: 48px;
-        padding: 0;
-        font-size: 1rem;
-        letter-spacing: 1px;
-        bottom: 20px;
-        float: center;  /* center the menu */
-        
-    }
-    .bottom-menu ul {
-        display: flex;
-    flex-wrap: nowrap;                 /* keep one row */
-    overflow-x: auto;                  /* allow horizontal scroll if needed */
-    -webkit-overflow-scrolling: touch; /* smooth iOS scroll */
-    gap: 1rem;
-    margin: 0;
-    padding: 0 1rem;
-        justify-content: center;
-    }
-    .bottom-menu li {
-        flex: 0 0 auto;  /* don't shrink menu items */
-        margin: 0 5px; /* smaller spacing */
-    }
-    .bottom-menu a {
-        display: block;
-    padding: 14px 0;  /* less vertical padding per item */
-    line-height: 1;   /* keep the row compact */
-    }
-    .bottom-menu p {
-        display: none; /* remove the | separators */
-    }
-    
-}
+        /* Tablets and small notebooks */
+        @media screen and (max-width: 1024px) {
+            .character-home2 {
+                float: none;
+                margin: 20px auto;
+                font-size: 50px;
+            }
+
+            .bottom-menu {
+                font-size: 24px;
+                letter-spacing: 6px;
+                bottom: 20px;
+                right: 0;
+                left: 0;
+                /* center the menu */
+            }
+
+            .bottom-menu li {
+                margin: 0 10px;
+            }
+        }
+
+        /* Mobile phones */
+        @media screen and (max-width: 600px) {
+            .character-home {
+                float: none;
+                margin: 10px auto;
+                text-align: center;
+            }
+
+            .character-home2 {
+                font-size: 28px;
+                margin-top: 10px;
+            }
+
+            .bottom-menu {
+                height: 48px;
+                padding: 0;
+                font-size: 1rem;
+                letter-spacing: 1px;
+                bottom: 20px;
+                float: center;
+                /* center the menu */
+
+            }
+
+            .bottom-menu ul {
+                display: flex;
+                flex-wrap: nowrap;
+                /* keep one row */
+                overflow-x: auto;
+                /* allow horizontal scroll if needed */
+                -webkit-overflow-scrolling: touch;
+                /* smooth iOS scroll */
+                gap: 1rem;
+                margin: 0;
+                padding: 0 1rem;
+                justify-content: center;
+            }
+
+            .bottom-menu li {
+                flex: 0 0 auto;
+                /* don't shrink menu items */
+                margin: 0 5px;
+                /* smaller spacing */
+            }
+
+            .bottom-menu a {
+                display: block;
+                padding: 14px 0;
+                /* less vertical padding per item */
+                line-height: 1;
+                /* keep the row compact */
+            }
+
+            .bottom-menu p {
+                display: none;
+                /* remove the | separators */
+            }
+
+        }
     </style>
 </head>
+
 <body>
-    <div class = "character-home">
+    <div class="character-home">
         <img src="photos/pandorabuny.png" alt="Pandora Rosier" width="750">
     </div>
-    <div class = "character-home2">
+    <div class="character-home2">
         <h1>Pandora Rosier</h1>
     </div>
     <nav class="bottom-menu">
-    <ul>
-        <li><a href="pandora.html">Lore</a></li>
-        <p>|</p>
-        <li><a href="pandora.html">Physical appearance</a></li>
-        <p>|</p>
-        <li><a href="pandora.html">Traits</a></li>
-        <p>|</p>
-        <li><a href="pandora.html">Gallery</a></li>
-    </ul>
-</nav>
+        <ul>
+            <li><a href="pandora.html">Lore</a></li>
+            <p>|</p>
+            <li><a href="pandora.html">Physical appearance</a></li>
+            <p>|</p>
+            <li><a href="pandora.html">Traits</a></li>
+            <p>|</p>
+            <li><a href="pandora.html">Gallery</a></li>
+        </ul>
+    </nav>
     <footer>
         <p>© 2025 niky</p>
     </footer>
 </body>
+
 </html>
